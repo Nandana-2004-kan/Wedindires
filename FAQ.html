@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - WedIndiries Photography</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            background: #222;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .navbar a:hover {
+            transform: translateY(-5px);
+            color: #f0c040; /* Highlight color */
+        }
+        .faq-container {
+            width: 60%;
+            margin: 50px auto;
+            text-align: left;
+        }
+        .faq-item {
+            background: #222; /* Dark grey */
+            margin: 50px 0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid purple;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            display: none;
+            padding: 15px;
+            font-size: 16px;
+            background:peachpuff;
+            color:black;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: bounce 1.5s infinite;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .whatsapp-float img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="about.html" target="_blank">About Us</a>
+        <a href="ranjith.html" target="_blank">Services</a>
+        <a href="ranjith.html" target="_blank">Contact</a>
+        <a href="faq.html" target="_blank">FAQ</a>
+        <a href="film.html" target="_blank">Films</a>
+    </div>
+
+    <h1><b>FREQUENTLY ASKED QUESTIONS</b></h1>
+    <h2>Say 'I Do' to Beautiful Photos: Answers to Your Top Wedding Photography Questions</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>About WedIndiries Photography in short</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">We are a professional wedding photography team specializing in capturing beautiful moments.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Where are you based and where do you provide services?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">We are based in [Your Location] and provide services across multiple locations.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What services do you provide?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">Our services include wedding photography, pre-wedding shoots, candid photography, and videography.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What's the cost you engage with?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">Our pricing varies based on the package and requirements. Contact us for detailed pricing.</div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/9886017037" target="_blank" class="whatsapp-float">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script>
+        // Toggle FAQ answers and change + / - symbol
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const toggle = item.querySelector('.faq-toggle');
+
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    toggle.textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    toggle.textContent = '−';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
